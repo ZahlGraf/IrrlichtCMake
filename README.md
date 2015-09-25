@@ -24,7 +24,7 @@ I implemented the CMake-System for Windows, Unix Like systems and MacOSX. It sho
 
 ## <a name="LatestVersion"></a> Latest Version
 
-### 25.09.2015: Version 0.2.1 ([Download as ZIP](TODO))
+### 25.09.2015: Version 0.2.1 ([Download as ZIP](https://github.com/ZahlGraf/IrrlichtCMake/archive/v0.2.1.zip))
 
 #### Highlights
  * For Irrlicht 1.8.3
@@ -32,40 +32,31 @@ I implemented the CMake-System for Windows, Unix Like systems and MacOSX. It sho
  
 #### Tested Compilers
  * MSVC2015 (Windows7), 64bit
-   * static debug build
-   * shared debug build
-   * static release build
-   * shared release build
+   * debug: static/shared
+   * release: static/shared
    
  * Intel Compiler 16.0 together with MSVC2015 (Windows7), 64bit
-   * Last test with version 0.1.0 - It was not retested for this version due to minor changes.
+   * debug: static/shared
+   * release: static/shared
    
  * MSVC2015 (Windows7), 32bit
-   * static debug build
-   * shared debug build
-   * static release build
-   * shared release build
+   * debug: static/shared
+   * release: static/shared
 
    
  * MinGW (GCC 4.9.3) (Windows7), 64bit
-   * static debug build
-   * shared debug build
-   * static release build
-   * shared release build
+   * debug: static/shared
+   * release: static/shared
 
    
  * MinGW (GCC 4.9.3) (Windows7), 32bit
-   * static debug build
-   * shared debug build
-   * static release build
-   * shared release build
+   * debug: static/shared
+   * release: static/shared
 
    
  * GCC 4.9.2 (Debian), 64bit
-   * static debug build
-   * shared debug build
-   * static release build
-   * shared release build
+   * debug: static/shared
+   * release: static/shared
 
    
 #### Attention:
@@ -188,30 +179,22 @@ This build system compiles all examples and tools together with the Irrlicht lib
  
 #### Tested Compilers
  * MSVC2015 (Windows7), 64bit
-   * static debug build
-   * shared debug build
-   * static release build
-   * shared release build
+   * debug: static/shared
+   * release: static/shared
 
  * Intel Compiler 16.0 together with MSVC2015 (Windows7), 64bit
-   * static debug build
-   * shared debug build
-   * static release build
-   * shared release build
+   * debug: static/shared
+   * release: static/shared
 
    
  * MinGW (GCC 4.9.3) (Windows7), 64bit
-   * static debug build
-   * shared debug build
-   * static release build
-   * shared release build
+   * debug: static/shared
+   * release: static/shared
 
    
  * MinGW (GCC 4.9.3) (Windows7), 32bit
-   * static debug build
-   * shared debug build
-   * static release build
-   * shared release build
+   * debug: static/shared
+   * release: static/shared
 
 #### Attention:
  * MacOSX and CLang has not been tested so far. It would be really great if you could test it and send me a feedback or - in case of errors - a patch.
