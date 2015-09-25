@@ -24,11 +24,10 @@ I implemented the CMake-System for Windows, Unix Like systems and MacOSX. It sho
 
 ## <a name="LatestVersion"></a> Latest Version
 
-The Version numbers are the same like the Irrlicht version number. This means IrrlichtCMake 1.8.3 is able to compiler Irrlicht 1.8.3.
-
-### 25.09.2015: Version 1.8.3 ([Download as ZIP](TODO))
+### 25.09.2015: Version 0.2.1 ([Download as ZIP](TODO))
 
 #### Highlights
+ * For Irrlicht 1.8.3
  * Initial GitHub release
  
 #### Tested Compilers
@@ -38,6 +37,8 @@ The Version numbers are the same like the Irrlicht version number. This means Ir
    * static release build
    * shared release build
    
+ * Intel Compiler 16.0 together with MSVC2015 (Windows7), 64bit
+   * Last test with version 0.1.0 - It was not retested for this version due to minor changes.
    
  * MSVC2015 (Windows7), 32bit
    * static debug build
@@ -75,11 +76,12 @@ The Version numbers are the same like the Irrlicht version number. This means Ir
 
  * Install [CMake](http://cmake.org/) at your system. I used CMake 3.3.1 for the creation of the files. However I think also older CMake versions should work.
  
- * Take care that CMake and also the Compiler binaries are in your PATH variable when configuring with the build (For example on windows you must execute batch file of the compiler to have the compiler binary on your PATH. The batch file for MSVC2015 is called `VsDevCmd.bat` and can be opened from the Start Menu).
+ * Take care that CMake and also the Compiler binaries are in your PATH variable when configuring the build (For example on windows you may have to execute a batch file of the compiler to have the compiler binary on your PATH. The batch file for MSVC2015 is called `VsDevCmd.bat` and can be opened from the Start Menu).
  
- * Download a ZIP of this build system and copy all files into your Irrlicht directory. Take care that the `CMakeLists.txt` is in the root patch of irrlicht like here:
+ * Download a ZIP of this build system and copy all files into your Irrlicht directory. Take care that the `CMakeLists.txt` is in the root path of irrlicht like here:
  
  ![Irrlicht Directory Layout](Doc/Images/Layout.png)
+ 
  (The CMake build system should not overwrite any file of the Irrlicht directory. It just adds some new files and directories!)
 
 ### <a name="CompilingTheLibrary"></a> Compiling the whole library
@@ -88,15 +90,15 @@ The Version numbers are the same like the Irrlicht version number. This means Ir
 
  * Open the command line promt with CMake and the Compiler at your PATH variable
  
- * Goto the Irrlicht root directory. I will always say `<irrlicht-root>` to it in the next descriptions.
+ * Goto the Irrlicht root directory. I will always say `<irrlicht-root>` to it in this descriptions.
  
- * Enter `cmake-gui` to your command-prompt to open CMake (of course there is also a command line only version available, but for beginners I will explain the GUI here. If you are an expert and want to use a automatic build, you will be able to adapt this description). 
+ * Enter `cmake-gui` to your command-prompt to open CMake (I will only explain the CMake GUI process, because I guess the Experts that use CMake from command line, know how to compile anything with CMake :-) ). 
  
  * On the top of the window, you will see two text fields "Where is the source" and "Where to build the binary":
    * Enter in "Where is the source" the Irrlicht root directory `<irrlicht-root>` where also the `CMakeLists.txt` file is inside.
    
    * Enter in "Where to build the binary" a path where all temporary files for the build process are stored. I would suggest `<irrlicht-root>/build-vc64/debug/shared` when you build with Visual C++ 64bit the debug shared library. 
-     By using such an directory naming you can easily build and use Irrlicht with different compilers and for different library types (debug/release, shared/static).
+     By using such a directory naming you can easily build and use Irrlicht with different compilers and for different library types (debug/release, shared/static).
 
    ![Path Setup](Doc/Images/PathSetup.png)
    
@@ -168,19 +170,20 @@ This build system compiles all examples and tools together with the Irrlicht lib
 
  * Compiling a single example is very easy: Follow the steps from above, however as source path please use the directory where the example is inside.
  
- * Furthermore, since the library is not compiled together with the example, you have to specify some additional setting where CMake can find the Irrlicht library. During the configuration step you will get errors as long as the build system found all dependency files.
+ * Furthermore, since the library is not compiled together with the example, you have to specify some additional setting where CMake can find the Irrlicht library. During the configuration step you will get errors as long as the build system does not find all dependency files.
  
  * These are the additional setting:
  
    * `IRRLICHT_INCLUDE_DIR` = Where to find the `irrlicht.h` header file.
    * `IRRLICHT_LIBRARY` = The path to the Irrlicht link library (found in the install directory inside `lib`). 
-   * `IRRLICHT_SHARED_BIN` = The path to the Irrlicht shared library (found in the install directory inside `bin`).
+   * `IRRLICHT_SHARED_BIN` = The path to the Irrlicht shared library (found in the install directory inside `bin`) **Note:** This is only necessary when you use an non-static version of Irrlicht.
    
 ## <a name="Version History"></a> Version History
 
-### 13.09.2015: Version 1.8.2 ([Download as ZIP](TODO))
+### 13.09.2015: Version 0.1.0 ([Download as ZIP](http://www.file-upload.net/download-10907937/irrlicht-1.8.2.zip.html))
 
 #### Highlights
+ * For Irrlicht 1.8.2
  * Initial CMake build system for Irrlicht (no release on GitHub)
  
 #### Tested Compilers
@@ -190,8 +193,7 @@ This build system compiles all examples and tools together with the Irrlicht lib
    * static release build
    * shared release build
 
-   
- * MSVC2015 (Windows7), 32bit
+ * Intel Compiler 16.0 together with MSVC2015 (Windows7), 64bit
    * static debug build
    * shared debug build
    * static release build
