@@ -24,7 +24,7 @@ I implemented the CMake-System for Windows, Unix Like systems and MacOSX. It sho
 
 ## <a name="LatestVersion"></a> Latest Version
 
-### ??.??.2015: Version 0.?.? (unstable not tested yet)
+### Upcomming: master-branch (unstable not tested yet)
 
 #### Highlights
  * Change license to ZLIB to be fully compatible with the Irrlicht license
