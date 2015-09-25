@@ -1,3 +1,5 @@
+/build/*
+/install/*
 /Doc/aesGladman.txt
 /Doc/bzip2-license.txt
 /Doc/html/001shot.jpg
