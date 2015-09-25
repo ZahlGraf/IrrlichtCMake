@@ -55,6 +55,7 @@ if (APPLE)
 			${OS_DEPENDENT_LIBRARIES}
 			GL 
 			Xxf86vm
+			X11
 		)	
 		
 		INCLUDE_DIRECTORIES(
