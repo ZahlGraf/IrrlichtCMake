@@ -24,10 +24,10 @@
 
 SET(MSVC_LIKE_COMPILER OFF)
 
-if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
+if ("x${CMAKE_CXX_COMPILER_ID}" STREQUAL "xMSVC")
 	message(STATUS "Detect MSVC compiler...")
 	SET(MSVC_LIKE_COMPILER ON)
-elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel")
+elseif ("x${CMAKE_CXX_COMPILER_ID}" STREQUAL "xIntel")
 	if(WIN32)
 		message(STATUS "Detect Intel compiler and handle it like MSVC...")
 		SET(MSVC_LIKE_COMPILER ON)

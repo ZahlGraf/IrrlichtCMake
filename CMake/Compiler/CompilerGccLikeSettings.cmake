@@ -24,13 +24,13 @@
 
 SET(GCC_LIKE_COMPILER OFF)
 
-if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+if ("x${CMAKE_CXX_COMPILER_ID}" STREQUAL "xClang")
 	message(STATUS "Detect CLANG compiler and handle it like GCC...")
 	SET(GCC_LIKE_COMPILER ON)
-elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+elseif ("x${CMAKE_CXX_COMPILER_ID}" STREQUAL "xGNU")
 	message(STATUS "Detect GCC compiler...")
 	SET(GCC_LIKE_COMPILER ON)
-elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel")
+elseif ("x${CMAKE_CXX_COMPILER_ID}" STREQUAL "xIntel")
 	if(UNIX)
 		message(STATUS "Detect Intel compiler and handle it like GCC...")
 		SET(GCC_LIKE_COMPILER ON)
