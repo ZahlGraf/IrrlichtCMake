@@ -1,0 +1,29 @@
+cmake_minimum_required(VERSION 3.0)
+
+SET(CMAKE_MODULE_PATH 
+	${CMAKE_MODULE_PATH} 
+	${CMAKE_CURRENT_SOURCE_DIR}/CMake
+	${CMAKE_CURRENT_SOURCE_DIR}/../../CMake
+)
+
+INCLUDE(ExampleBuild)
+
+SET(EXAMPLE_SOURCE_FILES
+	newFontTool/CFontTool.cpp
+	newFontTool/main.cpp
+)
+
+SET(EXAMPLE_HEADER_FILES	
+	newFontTool/CFontTool.h
+	newFontTool/CVectorFontTool.h
+)
+
+SET(EXAMPLE_INSTALL_FILES
+	readme.txt
+)
+
+SET(EXAMPLE_INSTALL_DIRS
+	oldFontTool
+)
+
+BUILD_TOOL("IrrFontTool_new" "${EXAMPLE_SOURCE_FILES}" "${EXAMPLE_HEADER_FILES}" "${EXAMPLE_INSTALL_FILES}" "${EXAMPLE_INSTALL_DIRS}")

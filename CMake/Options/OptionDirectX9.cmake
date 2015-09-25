@@ -1,0 +1,20 @@
+if(WIN32)
+	SET (IRRLICHT_ENABLE_DIRECTX9 ON CACHE BOOL "Enabled DirectX9 support.")
+else()
+	SET (IRRLICHT_ENABLE_DIRECTX9 OFF CACHE BOOL "Enabled DirectX9 support.")
+endif()
+
+if (IRRLICHT_ENABLE_DIRECTX9)
+	message(STATUS "Enable DirectX support...")
+	ADD_DEFINITIONS(
+		-DIRR_COMPILE_WITH_DX9_DEV_PACK
+	)
+					
+else ()
+	message(STATUS "Disable DirectX support...")
+	ADD_DEFINITIONS(
+		-DNO_IRR_COMPILE_WITH_DIRECTINPUT_JOYSTICK_
+		-DNO_IRR_COMPILE_WITH_DIRECT3D_9_
+	)
+		
+endif ()
