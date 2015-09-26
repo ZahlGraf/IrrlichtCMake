@@ -29,6 +29,9 @@ I implemented the CMake-System for Windows, Unix Like systems and MacOSX. It sho
 #### Highlights
  * Change license to ZLIB to be fully compatible with the Irrlicht license
 
+#### Fixes
+ * Error since include was written agains a case insensitive file system (pull-request [#1](https://github.com/ooxi/IrrlichtCMake/commit/767b2fffb82ab5b6b5fefa44f1efbcf734f79a97))
+
 ### 25.09.2015: Version 0.2.1 ([Download as ZIP](https://github.com/ZahlGraf/IrrlichtCMake/archive/v0.2.1.zip))
 
 #### Highlights
