@@ -69,7 +69,7 @@ FUNCTION(BUILD_APP_GENERIC APP_NAME APP_SOURCE_FILES APP_HEADER_FILES APP_INSTAL
 	# When the examples are build without irrlicht library, we need to apply the same settings like for irrlicht
 	if (ZZZ_EXAMPLE_SINGLE_COMPILE)
 		# Load compiler dependent settings...
-		INCLUDE(CompilerGCCLikeSettings)
+		INCLUDE(CompilerGccLikeSettings)
 		INCLUDE(CompilerMSVCLikeSettings)
 
 		# Load os dependent settings...

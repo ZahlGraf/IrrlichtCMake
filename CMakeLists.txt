@@ -40,7 +40,7 @@ INCLUDE(IrrlichtVersion)
 INCLUDE(IrrlichtSource)
 
 # Load compiler dependent settings...
-INCLUDE(CompilerGCCLikeSettings)
+INCLUDE(CompilerGccLikeSettings)
 INCLUDE(CompilerMSVCLikeSettings)
 
 # Load os dependent settings...
