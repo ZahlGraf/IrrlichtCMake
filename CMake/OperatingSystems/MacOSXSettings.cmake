@@ -64,23 +64,13 @@ if (APPLE)
 	endif ()	
 	
 	if (IRRLICHT_ENABLE_X11_SUPPORT)
+	
 		if ("$ENV{HOSTTYPE}" STREQUAL "x86_64")
 			LINK_DIRECTORIES(/usr/X11R6/lib64)
 		else ()
 			LINK_DIRECTORIES(/usr/X11R6/lib)
 		endif ()
-		
-		SET (OS_DEPENDENT_LIBRARIES
-			${OS_DEPENDENT_LIBRARIES}
-			GL 
-			Xxf86vm
-			X11
-		)	
-		
-		INCLUDE_DIRECTORIES(
-			/usr/X11R6/include
-		)	
-	
+			
 	else ()	
 		if (GCC_LIKE_COMPILER)		
 			SET (CMAKE_STATIC_LINKER_FLAGS
