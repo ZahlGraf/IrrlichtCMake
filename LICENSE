@@ -1,12 +1,14 @@
 This license belongs to most of the files in the Irrlicht CMake build system.
-However there are two exceptions:
+However there are some exceptions:
 CMake/Packages/FindPkgMacros.cmake
 CMake/Packages/FindDirectX.cmake
 
 Both files are from the Ogre3D build system ( http://www.ogre3d.org/ ) and uses the same license like all Ogre3D build system Files.
 Find the specific license description of these files in the file header.
 
-All other files use the following license:
+CMake/Packages/FindFontconfig.cmake - from Laurent Montel, uses the BSD license (see fileheader for details)
+
+All other files use the following ZLIB license:
 
  Copyright (c) 2015 André Netzeband
 
