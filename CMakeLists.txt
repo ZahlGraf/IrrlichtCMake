@@ -68,7 +68,6 @@ ADD_DEFINITIONS(
 # Add dependency definitions
 INCLUDE(DependencyOpenGL)
 INCLUDE(DependencyDirectX9)
-INCLUDE(DependencyDirectX9)
 INCLUDE(DependencyFontConfig)
 INCLUDE(DependencyX11)
 INCLUDE(DependencyFreeType)
