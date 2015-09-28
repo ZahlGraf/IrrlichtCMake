@@ -21,8 +21,26 @@
 message(STATUS " ")
 message(STATUS "The following settings have been applied:")
 message(STATUS " -> Dependencies found:")
-message(STATUS "    * OpenGL:   ${OPENGL_FOUND}")
-message(STATUS "    * DirectX9: ${DirectX9_FOUND}")
+message(STATUS "    * OpenGL:     ${OPENGL_FOUND}")
+
+if (WIN32)
+	message(STATUS "    * DirectX9:   ${DirectX9_FOUND}")
+endif ()
+
+if ((UNIX) OR ((APPLE) AND (IRRLICHT_ENABLE_X11_SUPPORT)))
+	message(STATUS "    * X11:        ${X11_FOUND}")
+	
+	if (IRRLICHT_BUILD_EXAMPLES OR IRRLICHT_BUILD_TOOLS)
+		message(STATUS "    * X11xf86vm:  ${X11_xf86vmode_FOUND}")	
+	endif ()
+	
+	if (IRRLICHT_BUILD_TOOLS)
+		message(STATUS "    * FontConfig: ${FONTCONFIG_FOUND}")
+		message(STATUS "    * X11 Xft:    ${X11_Xft_FOUND}")	
+		message(STATUS "    * Freetype:   ${FREETYPE_FOUND}")	
+	endif ()
+endif ()
+
 message(STATUS " ")
 message(STATUS " -> Options set:")
 message(STATUS "    * Profiling Support:   ${IRRLICHT_ENABLE_PROFILING}")
