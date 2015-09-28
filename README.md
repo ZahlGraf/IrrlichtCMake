@@ -27,16 +27,21 @@ I implemented the CMake-System for Windows, Unix Like systems and MacOSX. It sho
 ### Upcomming: master-branch (unstable not tested yet)
 
 #### Highlights
- * Change license to ZLIB to be fully compatible with the Irrlicht license
+ * nothing planned
 
 #### Fixes
- * Error since include was written agains a case insensitive file system (pull-request [#1](https://github.com/ooxi/IrrlichtCMake/commit/767b2fffb82ab5b6b5fefa44f1efbcf734f79a97))
+ * nothing planned
 
-### 25.09.2015: Version 0.2.1 ([Download as ZIP](https://github.com/ZahlGraf/IrrlichtCMake/archive/v0.2.1.zip))
+### 28.09.2015: Version 0.2.2 ([Download as ZIP](https://github.com/ZahlGraf/IrrlichtCMake/archive/v0.2.2.zip))
 
 #### Highlights
  * For Irrlicht 1.8.3
- * Initial GitHub release
+ * Change license to ZLIB to be fully compatible with the Irrlicht license
+ * Use CMake FindLib command to find paths to X11, Xft, fontconfig and freetype library
+ * Print CMake warning when examples/tools are build without installed Xft, fontconfig and freetype library
+
+#### Fixes
+ * Error since wrong include file-name at sensitive file system (pull-request [#1](https://github.com/ooxi/IrrlichtCMake/commit/767b2fffb82ab5b6b5fefa44f1efbcf734f79a97))
  
 #### Tested Compilers
  * MSVC2015 (Windows7), 64bit
@@ -178,6 +183,40 @@ This build system compiles all examples and tools together with the Irrlicht lib
    * `IRRLICHT_SHARED_BIN` = The path to the Irrlicht shared library (found in the install directory inside `bin`) **Note:** This is only necessary when you use an non-static version of Irrlicht.
    
 ## <a name="Version History"></a> Version History
+
+### 25.09.2015: Version 0.2.1 ([Download as ZIP](https://github.com/ZahlGraf/IrrlichtCMake/archive/v0.2.1.zip))
+
+#### Highlights
+ * For Irrlicht 1.8.3
+ * Initial GitHub release
+ 
+#### Tested Compilers
+ * MSVC2015 (Windows7), 64bit
+   * debug: static/shared
+   * release: static/shared
+   
+ * Intel Compiler 16.0 together with MSVC2015 (Windows7), 64bit
+   * debug: static/shared
+   * release: static/shared
+   
+ * MSVC2015 (Windows7), 32bit
+   * debug: static/shared
+   * release: static/shared
+
+   
+ * MinGW (GCC 4.9.3) (Windows7), 64bit
+   * debug: static/shared
+   * release: static/shared
+
+   
+ * MinGW (GCC 4.9.3) (Windows7), 32bit
+   * debug: static/shared
+   * release: static/shared
+
+   
+ * GCC 4.9.2 (Debian), 64bit
+   * debug: static/shared
+   * release: static/shared
 
 ### 13.09.2015: Version 0.1.0 ([Download as ZIP](http://www.file-upload.net/download-10907937/irrlicht-1.8.2.zip.html))
 
