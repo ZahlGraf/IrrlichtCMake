@@ -1,3 +1,4 @@
+# The ZLIB license
 #
 # Copyright (c) 2015 André Netzeband
 #

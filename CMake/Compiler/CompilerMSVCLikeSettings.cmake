@@ -1,4 +1,6 @@
 #
+# The ZLIB license
+#
 # Copyright (c) 2015 André Netzeband
 #
 # This software is provided 'as-is', without any express or implied
