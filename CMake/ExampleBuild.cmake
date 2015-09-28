@@ -94,6 +94,9 @@ FUNCTION(BUILD_APP_GENERIC APP_NAME APP_SOURCE_FILES APP_HEADER_FILES APP_INSTAL
 		# Add dependency definitions
 		INCLUDE(DependencyOpenGL)
 		INCLUDE(DependencyDirectX9)
+		INCLUDE(DependencyFontConfig)
+		INCLUDE(DependencyX11)		
+		INCLUDE(DependencyFreeType)		
 		
 		# Print all settings
 		#INCLUDE(PrintSettings)
